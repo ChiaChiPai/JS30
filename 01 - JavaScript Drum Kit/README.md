@@ -1,3 +1,5 @@
+# 題目描述
+點擊鍵盤讓畫面上相對應的英文字母發出聲音及產生動畫。
 ## TypeScript Issue
 - Element 不等於 HTMLElement
   ```javescript=
