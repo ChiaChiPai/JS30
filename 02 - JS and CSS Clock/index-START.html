@@ -9,9 +9,9 @@
 
     <div class="clock">
       <div class="clock-face">
-        <div class="hand hour-hand"></div>
-        <div class="hand min-hand"></div>
-        <div class="hand second-hand"></div>
+        <div id="hour" class="hand hour-hand"></div>
+        <div id="min" class="hand min-hand"></div>
+        <div id="second" class="hand second-hand"></div>
       </div>
     </div>
 
@@ -53,22 +53,32 @@
       position: relative;
       width: 100%;
       height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      transform: translate(-3px, -3px); /* account for the height of the clock hands */
     }
 
     .hand {
-      width: 50%;
-      height: 6px;
+      width: 6px;
+      height: 50%;
       background: black;
       position: absolute;
-      top: 50%;
+      left: 50%;
+      transform-origin: center bottom;
+    }
+
+    .hour-hand {
+      background: red;
+    }
+
+    .min-hand {
+      background: blue;
+    }
+
+    .second-hand {
+      transform: rotate(260deg)
     }
 
   </style>
 
-  <script>
-
-
-  </script>
+  <script src="./index.js"></script>
 </body>
 </html>
